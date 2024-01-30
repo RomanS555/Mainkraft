@@ -20,5 +20,6 @@ public class Movement : MonoBehaviour
         dirZ = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(dirX,dirZ);
         jbj
+        
     }
 }
