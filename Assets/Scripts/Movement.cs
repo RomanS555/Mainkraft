@@ -5,8 +5,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private float dirX, dirZ;
-    public float speed = 2f;
+
+    [SerializeField] private float speed = 3f; // скорость движения
+    [SerializeField] private int health; // здоровье
     
     // Start is called before the first frame update
     void Start()
