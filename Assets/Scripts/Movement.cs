@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float dirX, dirZ;
+    public float speed = 2f;
     
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,8 @@ public class Movement : MonoBehaviour
     {
         dirX = Input.GetAxis("Horizontal");
         dirZ = Input.GetAxis("Vertical");
-        rb.velocity = new Vector2(dirX,dirZ);
-        jbj
+        rb.velocity = new Vector2(dirX,dirZ)*speed;
+        
         
     }
 }
