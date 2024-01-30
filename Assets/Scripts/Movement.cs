@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     {
         dirX = Input.GetAxis("Horizontal");
         dirZ = Input.GetAxis("Vertical");
-        rb.velocity = new Vector2(dirX,dirZ)*speed;
+        rb.velocity += new Vector2(dirX,dirZ)*speed;
         
         
     }
