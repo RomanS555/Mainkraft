@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour{
     [SerializeField] private Transform player;
+    [SerializeField] private float speed;
     private Vector3 pos;
+    
 
     private void Awake()
     {
         if (!player)
-            player = FindObjectOfType<Hero>().transform;
+            player = FindObjectOfType<Movement>().transform;
     }
 
     private void Update()
@@ -17,6 +19,6 @@ public class CameraController : MonoBehaviour{
         pos = player.position;
         pos.z = -10f;
 
-        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * speed);
     }
 }
